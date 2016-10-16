@@ -61,4 +61,14 @@ cartesianProduct xs ys = do
   j <- ys
   pure [i, j]
 
+-- 3
+pythagoreanTriple :: Int -> Array (Array Int)
+pythagoreanTriple n = do
+  i <- 1 .. n
+  j <- i .. n
+  k <- 1 .. n
+  guard $ (i * i) + (j * j) == (k * k)
+  pure [i, j, k]
 
+-- 4
+-- factorizations :: Int -> Array (Array Int)
